@@ -5,7 +5,7 @@ export default function Work() {
         The Work
       </h1>
       <p className="mt-4 text-neutral-500">
-        I got good stuff cooking in here, but it's taking some time. Please check back again next month.
+        Good stuff is cooking in here, but slowly. Please check back again next month.
       </p>
     </main>
   );
