@@ -1,19 +1,21 @@
 const TICKER_ITEMS = [
+  "Campaign",
+  "Activation",
+  "UX",
   "Retail",
   "Toys",
-  "Campaign",
-  "UX",
+  "Collectibles",
   "Consumer Tech",
   "Brand Launch",
   "OoH",
   "TVC",
-  "Exhibitions",
+  "Exhibition",
   "Product Launch",
   "Luxury",
   "Government",
 ];
 
-const TICKER_LINE = `${TICKER_ITEMS.join(" · ")} · `;
+const TICKER_LINE = ` · ${TICKER_ITEMS.join(" · ")} · `;
 const REPETITIONS = 4;
 
 function TickerSegment() {
