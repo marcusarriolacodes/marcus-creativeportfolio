@@ -1,13 +1,12 @@
-import FadeInSection from "@/components/FadeInSection";
-
 export default function Work() {
   return (
-    <main className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
-      <FadeInSection>
-        <h1 className="text-4xl font-medium tracking-tight text-neutral-900 md:text-5xl">
-          Work
-        </h1>
-      </FadeInSection>
+    <main className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <h1 className="text-3xl font-medium tracking-tight text-neutral-900 md:text-4xl">
+        The Work
+      </h1>
+      <p className="mt-4 text-neutral-500">
+        I got good stuff cooking in here, but it's taking some time. Please check back again next month.
+      </p>
     </main>
   );
 }
