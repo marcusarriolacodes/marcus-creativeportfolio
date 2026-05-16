@@ -1,9 +1,19 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Nav from "@/components/Nav";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
 export const metadata: Metadata = {
   title: "Marcus Arriola",
   description:
     "Portfolio of Marcus, Senior Copywriter and keyboard pummeller.",
   openGraph: {
-    title: "Marcus Arriola&apos;s Creative Chaos",
+    title: "Marcus Arriola — Creative Chaos",
     description:
       "Portfolio of Marcus, Senior Copywriter and keyboard pummeller.",
     url: "https://marcus-creativeportfolio.vercel.app",
@@ -20,9 +30,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marcus Arriola&apos;s Creative Chaos",
+    title: "Marcus Arriola — Creative Chaos",
     description:
       "Portfolio of Marcus, Senior Copywriter and keyboard pummeller.",
     images: ["https://marcus-creativeportfolio.vercel.app/og-image.png"],
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={inter.variable}>
+      <body className="bg-white font-sans text-neutral-900 antialiased">
+        <Nav />
+        {children}
+      </body>
+    </html>
+  );
+}
