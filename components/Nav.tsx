@@ -26,7 +26,7 @@ export default function Nav() {
             </Link>
           ))}
           <Link
-            href="mailto:marcusarriola@gmail.com"
+            href=/contact
             className="rounded-full border border-neutral-300 px-4 py-1.5 text-sm text-neutral-900 transition-colors hover:border-neutral-900 hover:bg-neutral-900 hover:text-white md:px-5 md:py-2"
           >
             Let&apos;s Talk
