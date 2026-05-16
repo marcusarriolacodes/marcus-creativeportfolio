@@ -11,7 +11,7 @@ export default function Contact() {
           Fill in the form and I&apos;ll get back to you.
         </p>
         <form
-          action="https://formspree.io/f/mykvgeqj"
+          action="https://formspree.io/f/mbdbrode"
           method="POST"
           className="mt-8 flex flex-col gap-5"
         >
