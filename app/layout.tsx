@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="bg-white font-sans text-neutral-900 antialiased">
         <Nav />
         {children}

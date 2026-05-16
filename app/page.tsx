@@ -67,7 +67,7 @@ export default function Home() {
       <Ticker />
 
       <FadeInSection className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
-        <h2 className="font-serif text-3xl tracking-tight text-neutral-900 md:text-4xl">
+        <h2 className="text-3xl font-medium tracking-tight text-neutral-900 md:text-4xl">
           Some of my professionally-approved chaos:
         </h2>
         <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:mt-16 lg:grid-cols-3 lg:gap-8">

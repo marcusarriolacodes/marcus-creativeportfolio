@@ -29,28 +29,15 @@ const TONES = [
 ] as const;
 
 const DEFAULT_INDEX = 2;
+const MAX_INDEX = TONES.length - 1;
 
 export default function ToneSlider() {
   const [index, setIndex] = useState(DEFAULT_INDEX);
   const tone = TONES[index];
+  const thumbPercent = (index / MAX_INDEX) * 100;
 
   return (
     <div className="mx-auto max-w-4xl text-center">
-      <div className="mb-8 flex justify-center md:mb-10">
-        <AnimatePresence mode="wait">
-          <motion.span
-            key={tone.name}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="rounded-full border border-neutral-300 px-3 py-1 text-xs tracking-wide text-neutral-600 md:text-sm"
-          >
-            {tone.name}
-          </motion.span>
-        </AnimatePresence>
-      </div>
-
       <div className="mb-12 flex min-h-[9rem] items-center justify-center md:mb-16 md:min-h-[11rem] lg:min-h-[12rem]">
         <AnimatePresence mode="wait">
           <motion.h1
@@ -59,7 +46,7 @@ export default function ToneSlider() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="font-serif text-3xl leading-[1.15] tracking-tight text-neutral-900 md:text-5xl lg:text-6xl"
+            className="text-3xl font-medium leading-[1.15] tracking-tight text-neutral-900 md:text-5xl lg:text-6xl"
           >
             {tone.headline}
           </motion.h1>
@@ -67,21 +54,43 @@ export default function ToneSlider() {
       </div>
 
       <div className="w-full">
-        <input
-          type="range"
-          min={0}
-          max={TONES.length - 1}
-          step={1}
-          value={index}
-          onChange={(event) => setIndex(Number(event.target.value))}
-          aria-label="Tone of voice"
-          aria-valuetext={tone.name}
-          className="tone-slider w-full cursor-pointer"
-        />
+        <div className="relative pb-1 pt-9">
+          <div
+            className="pointer-events-none absolute top-0 z-10 -translate-x-1/2 whitespace-nowrap"
+            style={{ left: `${thumbPercent}%` }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={tone.name}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="rounded-full border border-neutral-300 bg-white px-2.5 py-0.5 text-xs tracking-wide text-neutral-600 shadow-sm md:text-sm"
+              >
+                {tone.name}
+              </motion.span>
+            </AnimatePresence>
+          </div>
+          <input
+            type="range"
+            min={0}
+            max={MAX_INDEX}
+            step={1}
+            value={index}
+            onChange={(event) => setIndex(Number(event.target.value))}
+            aria-label="Tone of voice"
+            aria-valuetext={tone.name}
+            className="tone-slider relative z-0 w-full cursor-pointer"
+          />
+        </div>
         <div className="mt-3 flex justify-between gap-4 text-xs text-neutral-500 md:text-sm">
           <span className="text-left">LinkedIn Professional</span>
           <span className="text-right">Creative Wild Child</span>
         </div>
+        <p className="mt-4 text-center text-xs text-neutral-400 md:text-sm">
+          ← drag to change the tone →
+        </p>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/work", label: "Work" },
+  { href: "/work", label: "The Work" },
   { href: "/about", label: "About" },
 ];
 
@@ -11,7 +11,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 md:px-10 md:py-8">
         <Link
           href="/"
-          className="font-serif text-lg tracking-tight text-neutral-900 transition-opacity hover:opacity-70 md:text-xl"
+          className="text-lg font-medium tracking-tight text-neutral-900 transition-opacity hover:opacity-70 md:text-xl"
         >
           Marcus Arriola
         </Link>

@@ -9,12 +9,11 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-25%)" },
         },
       },
       animation: {
