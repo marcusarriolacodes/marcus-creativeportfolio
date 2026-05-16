@@ -10,36 +10,48 @@ const projects = [
     title: "World of Wines & Spirits – The Quest for the Finest",
     description:
       "Ultra-high-net-worth drinkers needed to feel special. We made sure they did.",
+    deliverables: "(Campaign, activation, brand launch, live theatre performance script, brand & style guide, etc.)",
+    cta: "Curious? View the work here!",
     image: "/images/wows.png",
   },
   {
     title: "iShopChangi – Tax AbsorbMania",
     description:
       "Singapore's only online tax and duty-absorbed shopping destination goes from URL to IRL.",
+    deliverables: "(Campaign, activation, physical collateral, digital, social, KOL content with concept, storyboard, talking points, and script)",
+    cta: "What's this about? View the work here!",
     image: "/images/tax-absorbmania.jpg",
   },
   {
     title: "National Heritage Board – Contribute to the Founders' Memorial",
     description:
       "The Founders' Memorial needed story and artefact contributions. We made a roving exhibition.",
+    deliverables: "(Campaign, activation, exhibition content, social media posts, video storyboard, interview pointers, script)",
+    cta: "Wanna know more? View the work here!",
     image: "/images/nhb.jpg",
   },
   {
     title: "Senoko Energy – Lower My Bills",
     description:
       "SG's oldest electricity provider needed a new, modern angle to reach new, modern, bill-conscious homeowners.",
+    deliverables: "(Campaign, concept & direction, social ideas & samples, pitch-winning presentation deck)",
+    cta: "How we did it: View the work here!",
     image: "/images/senoko.png",
   },
   {
     title: "Noah Singapore – Your Dick by Decade",
     description:
       "A groundbreaking men's health brand needed to build their audience with more entertaining penis-related storytelling.",
+    deliverables: "(Social media post)",
+    cta: "Be entertained! View the work here!",
     image: "/images/noah.jpg",
   },
   {
     title: "Po Chai Pills – Take Po Chai Pills!",
     description:
       "A household name and traditional diarrhoea remedy needed its other purposes known. I executed this with toilet humour.",
+    deliverables: "(Video concept, storyboard, animated video/ad)",
+    cta: "Fellow fan of Po Chai? View the work here!",
     image: "/images/po-chai.png",
   },
 ];
@@ -94,6 +106,15 @@ export default function Home() {
               <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                 {project.description}
               </p>
+              <p className="mt-2 text-sm italic text-neutral-400">
+                {project.deliverables}
+              </p>
+              <Link
+                href="/work"
+                className="mt-3 inline-block text-sm underline text-neutral-600 decoration-neutral-300 underline-offset-2 transition-colors hover:decoration-neutral-600"
+              >
+                {project.cta}
+              </Link>
             </article>
           ))}
         </div>
