@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import FadeInSection from "@/components/FadeInSection";
 import Footer from "@/components/Footer";
@@ -9,31 +10,37 @@ const projects = [
     title: "World of Wines & Spirits – The Quest for the Finest",
     description:
       "Ultra-high-net-worth drinkers needed to feel special. We made sure they did.",
+    image: "/images/wows.png",
   },
   {
     title: "iShopChangi – Tax AbsorbMania",
     description:
       "Singapore's only online tax and duty-absorbed shopping destination goes from URL to IRL.",
+    image: "/images/tax-absorbmania.jpg",
   },
   {
     title: "National Heritage Board – Contribute to the Founders' Memorial",
     description:
       "The Founders' Memorial needed story and artefact contributions. We made a roving exhibition.",
+    image: "/images/nhb.jpg",
   },
   {
     title: "Senoko Energy – Lower My Bills",
     description:
       "SG's oldest electricity provider needed a new, modern angle to reach new, modern, bill-conscious homeowners.",
+    image: "/images/senoko.png",
   },
   {
     title: "Noah Singapore – Your Dick by Decade",
     description:
       "A groundbreaking men's health brand needed to build their audience with more entertaining penis-related storytelling.",
+    image: "/images/noah.jpg",
   },
   {
     title: "Po Chai Pills – Take Po Chai Pills!",
     description:
       "A household name and traditional diarrhoea remedy needed its other purposes known. I executed this with toilet humour.",
+    image: "/images/po-chai.png",
   },
 ];
 
@@ -73,7 +80,14 @@ export default function Home() {
         <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:mt-16 lg:grid-cols-3 lg:gap-8">
           {projects.map((project) => (
             <article key={project.title} className="group">
-              <div className="aspect-[4/3] bg-neutral-200 transition-colors group-hover:bg-neutral-300" />
+              <div className="relative aspect-square w-full overflow-hidden bg-neutral-200 transition-colors group-hover:bg-neutral-300">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className="mt-5 text-base font-bold leading-snug text-neutral-900 md:text-lg">
                 {project.title}
               </h3>

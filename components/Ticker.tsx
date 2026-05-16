@@ -15,7 +15,7 @@ const TICKER_ITEMS = [
   "Government",
 ];
 
-const TICKER_LINE = ` ${TICKER_ITEMS.join(" · ")} · `;
+const TICKER_LINE = TICKER_ITEMS.join("\u00A0·\u00A0") + "\u00A0·\u00A0";
 const REPETITIONS = 4;
 
 function TickerSegment() {
