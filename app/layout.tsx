@@ -3,7 +3,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Marcus, Senior Copywriter and keyboard pummeller.",
   openGraph: {
-    title: "Marcus Arriola's Creative Chaos",
+    title: "Marcus Arriola&apos;s Creative Chaos",
     description:
       "Portfolio of Marcus, Senior Copywriter and keyboard pummeller.",
     url: "https://marcus-creativeportfolio.vercel.app",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marcus Arriola's Creative Chaos",
+    title: "Marcus Arriola&apos;s Creative Chaos",
     description:
       "Portfolio of Marcus, Senior Copywriter and keyboard pummeller.",
     images: ["https://marcus-creativeportfolio.vercel.app/og-image.png"],
